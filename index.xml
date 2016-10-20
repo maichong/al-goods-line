@@ -1,0 +1,3 @@
+<view class="al-goods-line">
+  <list key="listItems" name="al-goods-line-item" />
+</view>
