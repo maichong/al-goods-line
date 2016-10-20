@@ -7,11 +7,12 @@
 import wx from 'labrador';
 import GoodsLineItem from 'al-goods-line-item';
 
-const { array } = wx.PropTypes;
+const { array, func } = wx.PropTypes;
 
 export default class GoodsLine extends wx.Component {
   propTypes = {
-    items: array
+    items: array,
+    onChange: func
   };
   data = {
     items: []
@@ -22,7 +23,8 @@ export default class GoodsLine extends wx.Component {
       id: '>id',
       pic: '>pic',
       title: '>title',
-      price: '>price'
+      price: '>price',
+      onChange: '#handleChange'
     })
   };
 
@@ -48,5 +50,10 @@ export default class GoodsLine extends wx.Component {
 
   onUpdate(props) {
     this.setData({ items: props.items });
+  }
+
+  handleChange(component) {
+    let id = this.data.items[component.key].id;
+    this.props.onChange(id);
   }
 }
