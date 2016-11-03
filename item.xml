@@ -1,0 +1,13 @@
+<view class="al-goods-line-item" catchtap="handleGoodsClick">
+    <view class="col-10 margin-left-auto margin-right-auto border-bottom"></view>
+    <view class="flex items-center bg-white">
+        <view class="left">
+            <image class="al-goods-list-image inline-block" src="{{pic}}"></image>
+        </view>
+        <view>
+            <view class="al-goods-info">{{title}}</view>
+            <view class="al-goods-info">{{title}}</view>
+            <view class="al-goods-info red">￥{{price}}</view>
+        </view>
+    </view>
+</view>
