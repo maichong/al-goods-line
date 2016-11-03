@@ -13,7 +13,7 @@ npm i al-goods-line
 import Line from 'al-goods-line';
 children={
   line: new Line({
-    ...
+    //...
   });
 };
 ```
